@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./fontawesome-free-5.12.1-web/css/all.css" />
     <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -37,15 +38,24 @@
         </div>
         <div class="nav-links hidden">
           <ul class="nav-link">
-            <li><a href="#whoweare" class="link">who we are</a></li>
-            <li><a href="#whatwedo" class="link">what we do</a></li>
-            <li><a href="#whoweserve" class="link">who we serve</a></li>
-            <li><a href="#company" class="link">company</a></li>
-            <li><a href="#contact" class="link">contact</a></li>
+            <li><a href="index.html" class="link">home <span class="far fa-hand-point-down"><span></a></li>
+            <li><a href="career" class="link">career</a></li>
+            <li><a href="contact" class="link">contact</a></li>
           </ul>
         </div>
       </nav>
       <!-- end of nav bar -->
+      <!-- Home sub-section nav-bar -->
+      <div>
+        <ul class="home-links">
+          <li><a href="#whoweare" class="home-link">who we are</a></li>
+          <li><a href="#" class="home-link">what we do</a></li>
+          <li><a href="#" class="home-link">who we serve</a></li>
+          <li><a href="#" class="home-link">why us</a></li>
+          <li><a href="#" class="home-link">contact us</a></li>
+        </ul>
+      </div>
+      <!-- End of home sub-section nav-bar -->
     </header>
     <!-- end of header -->
     <!-- side bar -->
@@ -55,15 +65,67 @@
           <i class="fas fa-times"></i>
         </button>
         <ul class="sidebar-links">
-          <li><a href="#whoweare" class="sidebar-link">who we are</a></li>
-          <li><a href="#whatwedo" class="sidebar-link">what we do</a></li>
-          <li><a href="#whoweserve" class="sidebar-link">who we serve</a></li>
-          <li><a href="#company" class="sidebar-link">company</a></li>
-          <li><a href="#contact" class="sidebar-link">contact</a></li>
+          <li><a href="#index.html" class="sidebar-link">home</a></li>
+          <li><a href="#" class="sidebar-link">career</a></li>
+          <li><a href="#" class="sidebar-link">contact</a></li>
         </ul>
       </div>
     </aside>
     <!-- end of sidebar -->
+    <main class="section">
+      <section class="banner">
+        <img src="./images/banner.jpg" class="banner-img" />
+      </section>
+
+      <section class="whoweare section-center" id="whoweare">
+        <p class="whoweare-intro">
+          In a World of Technology, Limsons is
+          <span class="block">one stop destination </span>for all your desires.
+          Our wide exposure in various domains enables us to leverage and put to
+          use best practices from across industries for
+          <span class="block">our clients' benefit.</span>
+        </p>
+        <div class="whoweare-info">
+          <article class="aboutus">
+            <h3>about us</h3>
+            <div class="aboutus-img-container">
+              <img src="./images/aboutus.jpeg" class="vision-img" />
+              <button class="aboutus-btn">read more</button>
+            </div>
+
+            <p class="aboutus-details">
+              At Limsons IT Services, we carry comprehensive analysis of
+              specific business needs of every client and offer technology based
+              customized solutions to achieve business objectives. We establish
+              long lasting mutual relationship with our clients and consultants
+              by providing strategic client solutions and promoting consultant
+              career path. We work closely with our clients to deliver business
+              results through information technology. Our consultants take great
+              role in their expertise, technical ability and inspiration. We
+              believe the hard work, dedication and hands-on approach of our
+              work is the significant factor in the satisfaction of our
+              customers. Our consultants achieve job satisfaction and continue
+              to excel in their career.
+            </p>
+          </article>
+
+          <article class="vision">
+            <h3>vision</h3>
+            <div class="vision-img-container">
+              <img src="./images/vision.jpeg" class="vision-img" />
+              <button class="vision-btn">read more</button>
+            </div>
+            <p class="vision-details">
+              Limsons IT Services’ vision is to be the leading professional
+              analytics software and services and providing dynamic business
+              solutions to our clients in securing their business objectives
+              through the appropriate use and implementation of various
+              technology tools and techniques.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
     <!-- footer -->
     <footer class="footer section">
       <hr />

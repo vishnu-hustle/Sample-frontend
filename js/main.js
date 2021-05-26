@@ -8,7 +8,6 @@ const sidebar = document.querySelector('.sidebar');
 const closeBtn = document.querySelector('.close-btn');
 const sidebarLink = document.querySelectorAll('.sidebar-link')
 
-
 window.addEventListener("scroll", function () {
     if (window.pageYOffset > 150) {
         headerContact.classList.add('hidden')
@@ -50,3 +49,18 @@ for (let i = 0; i < sidebarLink.length; i++) {
         sidebar.classList.remove('show-sidebar');
     })
 }
+
+
+// aboutus-info and vision-info display/hide on click
+$(document).ready(function () {
+    $(".aboutus-btn").click(function () {
+        $(".aboutus-details").animate({
+            height: 'toggle'
+        });
+    });
+    $(".vision-btn").click(function () {
+        $(".vision-details").animate({
+            height: 'toggle'
+        });
+    })
+});
