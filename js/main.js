@@ -163,3 +163,55 @@ function triangleForMobile4() {
 /*
 WHAT WE DO SECTION ENDS
 */
+
+// who we server
+
+function popupindustry1msg(){
+
+   document.querySelector(".industry1-msg-bg").style.display = "flex";
+   document.querySelector(".industry1-msg").style.display = "flex";
+   document.querySelector(".industry2-msg").style.display = "none";
+   document.querySelector(".industry3-msg").style.display = "none";
+   document.querySelector(".industry4-msg").style.display = "none";
+
+}
+function popupindustry2msg(){
+
+    document.querySelector(".industry1-msg-bg").style.display = "flex";
+    document.querySelector(".industry1-msg").style.display = "none";
+    document.querySelector(".industry2-msg").style.display = "flex";
+    document.querySelector(".industry3-msg").style.display = "none";
+    document.querySelector(".industry4-msg").style.display = "none";
+ 
+ }
+ function popupindustry3msg(){
+
+    document.querySelector(".industry1-msg-bg").style.display = "flex";
+    document.querySelector(".industry1-msg").style.display = "none";
+    document.querySelector(".industry2-msg").style.display = "none";
+    document.querySelector(".industry3-msg").style.display = "flex";
+    document.querySelector(".industry4-msg").style.display = "none";
+ 
+ }
+ function popupindustry4msg(){
+
+    document.querySelector(".industry1-msg-bg").style.display = "flex";
+    document.querySelector(".industry1-msg").style.display = "none";
+    document.querySelector(".industry2-msg").style.display = "none";
+    document.querySelector(".industry3-msg").style.display = "none";
+    document.querySelector(".industry4-msg").style.display = "flex";
+ }
+
+function closepopup(){
+    
+ document.querySelector(".industry1-msg-bg").style.display = "none"
+ document.querySelector(".industry1-msg").style.display = "none";
+ document.querySelector(".industry2-msg").style.display = "none";
+ document.querySelector(".industry3-msg").style.display = "none";
+ document.querySelector(".industry4-msg").style.display = "none";
+  
+}
+
+
+  
+// End of who we server

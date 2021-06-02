@@ -552,7 +552,7 @@ WHAT WE DO SECTION STARTS
 
 .what-we-do-sub-container {
   padding: 5px;
-  margin: 0% 20% 20% 2%;
+  margin: 0% 20% 5% 2%;
   border-radius: 15px 50px;
   background: var(--clr-primary-6);
   /* padding: 1%; */
@@ -731,3 +731,198 @@ figcaption {
 /*
 WHAT WE DO SECTION ENDS
 */
+
+
+/* who we serve */
+#whoweserve{
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.whoweserve{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
+  align-items: center;
+  
+}
+
+.whoweserve .industries{
+  justify-content: center;  
+}
+.whoweserve h1{
+  
+  color:var(--clr-primary-3);
+  font:  var(--ff-primary);
+}
+.whoweserve .item {
+  position: relative;
+  border-radius: 10%;
+  display: flex;
+  margin: 2rem;
+  min-height: 450px;
+  width: 450px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  /* -webkit-transition: all 400ms ease-out;
+   -moz-transition: all 400ms ease-out;
+  -o-transition: all 400ms ease-out;
+ -ms-transition: all 400ms ease-out;
+  transition: all 400ms ease-out; */
+}
+
+.whoweserve .item h3{
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+/* .whoweserve .item:hover h3{
+ opacity: 0;
+} */
+
+.whoweserve .item p{
+  opacity: 0;
+  top: -100px;
+  position: relative;
+  text-align: justify;
+  font-size: 1rem;
+  color: #e9ecef;
+  padding: 30px;
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  
+}
+/* .whoweserve .item:hover{
+
+  background:rgba(0, 0, 0, 0.404);
+  opacity: 1;
+}
+
+.whoweserve .item:hover p{
+  opacity: 1;
+  transform: translateY(250px);
+        -webkit-transform: translateY(250px);
+
+  } */
+  .whoweserve .industries
+  {
+    margin-top: 30px;
+  }
+
+.whoweserve .industry1 {
+  background:-webkit-linear-gradient(rgba(0, 0, 0, 0.473), rgba(148, 148, 148, 0.26)),  url(/images/ind1.jpg);
+  background-size: cover;  
+}
+.whoweserve .industry2{
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.473), rgba(148, 148, 148, 0.26)),url(/images/ind2.jpg) ;
+  background-size: cover;
+}
+.whoweserve .industry3{
+  background:-webkit-linear-gradient(rgba(0, 0, 0, 0.473), rgba(148, 148, 148, 0.26)), url(/images/ind3.jpg) ;
+  background-size: cover;
+}
+.whoweserve .industry4{
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.473), rgba(148, 148, 148, 0.26)),url(/images/ind4.jpg) ;
+  background-size: cover;
+}
+
+.industry1-msg-bg{  
+  
+  display: none;
+  position: fixed;
+  z-index: 100; 
+  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100vw; 
+  height: 100vh; 
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.596); 
+  transition: 1s ease;
+}
+.industry1-msg,.industry2-msg,.industry3-msg,.industry4-msg {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px;
+  height: 40vh;
+  width: 60vh;
+  background-color: var(--grey-7);
+  
+}
+.industry1-msg p,.industry2-msg p,.industry3-msg p,.industry4-msg p{
+  align-self: center;
+  text-align: center;
+  position: relative;
+  margin: 10px;
+  font-size: 1rem;
+  color: var(--grey-1);
+}
+
+.whoweserver-btn {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  background: var(--grey-2);
+  padding: 0.85rem 1.25rem;
+  font-size: 1rem;
+  border: transparent;
+  border-radius: 2rem;
+  color: var(--clr-primary-5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+.whoweserver-btn:hover {
+  background: var(--clr-primary-10);
+  color: var(--clr-primary-1);
+}
+
+.industry1-close-btn{
+  position: relative;
+  font-size: 1rem;
+  color: #00000075;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+  .whoweserve{
+    display: flex;
+    flex-direction: column;
+   }
+
+   .whoweserve .industries{
+    display: flex;
+    flex-direction: row;
+   
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .whoweserve{
+    display: flex;
+    flex-direction: column;
+   }
+  
+  .whoweserve .industries{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+  }
+}
+/* end of who we serve */
