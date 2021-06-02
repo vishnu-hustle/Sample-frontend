@@ -166,52 +166,108 @@ WHAT WE DO SECTION ENDS
 
 // who we server
 
-function popupindustry1msg(){
+function popupindustry1msg() {
 
-   document.querySelector(".industry1-msg-bg").style.display = "flex";
-   document.querySelector(".industry1-msg").style.display = "flex";
-   document.querySelector(".industry2-msg").style.display = "none";
-   document.querySelector(".industry3-msg").style.display = "none";
-   document.querySelector(".industry4-msg").style.display = "none";
+    document.querySelector(".industry1-msg-bg").style.display = "flex";
+    document.querySelector(".industry1-msg").style.display = "flex";
+    document.querySelector(".industry2-msg").style.display = "none";
+    document.querySelector(".industry3-msg").style.display = "none";
+    document.querySelector(".industry4-msg").style.display = "none";
 
 }
-function popupindustry2msg(){
+
+function popupindustry2msg() {
 
     document.querySelector(".industry1-msg-bg").style.display = "flex";
     document.querySelector(".industry1-msg").style.display = "none";
     document.querySelector(".industry2-msg").style.display = "flex";
     document.querySelector(".industry3-msg").style.display = "none";
     document.querySelector(".industry4-msg").style.display = "none";
- 
- }
- function popupindustry3msg(){
+
+}
+
+function popupindustry3msg() {
 
     document.querySelector(".industry1-msg-bg").style.display = "flex";
     document.querySelector(".industry1-msg").style.display = "none";
     document.querySelector(".industry2-msg").style.display = "none";
     document.querySelector(".industry3-msg").style.display = "flex";
     document.querySelector(".industry4-msg").style.display = "none";
- 
- }
- function popupindustry4msg(){
+
+}
+
+function popupindustry4msg() {
 
     document.querySelector(".industry1-msg-bg").style.display = "flex";
     document.querySelector(".industry1-msg").style.display = "none";
     document.querySelector(".industry2-msg").style.display = "none";
     document.querySelector(".industry3-msg").style.display = "none";
     document.querySelector(".industry4-msg").style.display = "flex";
- }
+}
 
-function closepopup(){
-    
- document.querySelector(".industry1-msg-bg").style.display = "none"
- document.querySelector(".industry1-msg").style.display = "none";
- document.querySelector(".industry2-msg").style.display = "none";
- document.querySelector(".industry3-msg").style.display = "none";
- document.querySelector(".industry4-msg").style.display = "none";
-  
+function closepopup() {
+
+    document.querySelector(".industry1-msg-bg").style.display = "none"
+    document.querySelector(".industry1-msg").style.display = "none";
+    document.querySelector(".industry2-msg").style.display = "none";
+    document.querySelector(".industry3-msg").style.display = "none";
+    document.querySelector(".industry4-msg").style.display = "none";
+
 }
 
 
-  
+
 // End of who we server
+
+/*
+WHY US STARTS
+*/
+let newsArray = new Array();
+newsArray.push("Our organization is about scale and quality. We take great care to deliver the best to our customers by understanding their needs. Focus, agility and flexibility from our side are always paramount as we go the extra mile to drive success for our customers.");
+newsArray.push("We at Limsons IT Services LLC are Building the next Innovative IT job search website<b>Dollar Dream Jobs www.dollardreamjobs.com</b>. The fastest way to find the right IT job USA and All over world.");
+newsArray.push("We are accepting investment Capitol to develop this project. Raising a Target capital of $2 million with family and friends. $ 200,000 Committed so far by near and dear...");
+newsArray.push("Minimum Investment $ 2500. preferred is 12,000 per investor. Reach Invest@limsons.com for More details about Investment plan ROI Etc.");
+
+let newsIndex = 1;
+
+function loadleft() {
+
+    if (newsIndex > -1 && newsIndex < newsArray.length) {
+        document.getElementById('newsUpdate').innerText = newsArray[newsIndex];
+        document.getElementById('top-left-update').disabled = false;
+        document.getElementById('top-right-update').disabled = false;
+        document.getElementById('top-left-update-img').style.opacity = "1";
+        document.getElementById('top-right-update-img').style.opacity = "1";
+        newsIndex--;
+    }
+    if (newsIndex == -1) {
+        newsIndex = 1;
+        document.getElementById('top-left-update').disabled = true;
+        document.getElementById('top-left-update-img').style.opacity = "0.5";
+        document.getElementById('top-right-update').disabled = false;
+    }
+
+}
+
+function loadright() {
+
+    if (newsIndex > -1 && newsIndex < newsArray.length) {
+        document.getElementById('newsUpdate').innerText = newsArray[newsIndex];
+        document.getElementById('top-left-update').disabled = false;
+        document.getElementById('top-right-update').disabled = false;
+        document.getElementById('top-left-update-img').style.opacity = "1";
+        document.getElementById('top-right-update-img').style.opacity = "1";
+        newsIndex++;
+    }
+    if (newsIndex == newsArray.length) {
+        newsIndex = newsIndex - 2;
+        document.getElementById('top-right-update').disabled = true;
+        document.getElementById('top-left-update').disabled = false;
+        document.getElementById('top-right-update-img').style.opacity = "0.5";
+    }
+}
+
+
+/*
+WHY US ENDS
+*/
