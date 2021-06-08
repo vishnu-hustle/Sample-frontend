@@ -1330,3 +1330,217 @@ WHY US STARTS
   }
 }
 /* WHY US ENDS*/
+
+
+/* Carrer page */
+
+/* career banner */
+.careerbanner {
+  width: 100vw;
+  height: calc(100vh - 5rem);
+}
+
+.careerbanner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* end of career banner */
+/* service benifits */
+
+.service-benifits{  
+  max-width: 80%;
+  display: flex;
+  margin-top: 3rem;
+  flex-direction: column;
+}
+.service-benifits h3{
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.service-benifits p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  word-spacing: 2px;
+}
+.service-benifits span {
+ margin-right: 15px;
+}
+.service-benifits ul li {
+  font-size: .8rem;
+  line-height: 2rem;
+  word-spacing: 2px;
+}
+
+@media screen and (min-width: 769px) {
+  .service-benifits{ 
+      flex-direction: column;
+  }
+  .service-benifits-content{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  .service-benifits-content div{
+      width: 40%;
+  }
+}
+
+/* end of service benifits */
+/* job-requirement section */
+.job-requirement h3{
+  margin-bottom: 3rem;
+  
+}
+.job-requirement{
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  position: relative;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  
+}
+.job-requirement .table-job{
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+} 
+.job-requirement #table-job-requirement{
+  width: 80%;
+  position: relative;
+  height: min-content;
+}
+.job-requirement .job-requirement-search{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.job-requirement .job-requirement-search input[type=text] {
+  width: 60%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;    
+  margin-left: 10%;
+}
+
+.job-requirement .job-requirement-search  input[type=submit] {
+  width: 10%;
+  min-width: 4rem;
+  background-color: var(--grey-2);
+  padding: auto;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10%;
+}
+
+.job-requirement .table-page-number{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.job-requirement .table-page-number button{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border-color:rgba(0, 0, 0, 0.425) ;
+}
+.job-requirement .table-page-number button i{
+    font-size: .9rem;
+}
+.job-requirement #table-job-requirement tr {
+  background-color: rgba(0, 0, 0, 0.096);
+  color: var(--ff-primary);
+  text-align: left;
+  
+}
+
+
+.job-requirement #table-job-requirement th,td
+{
+  padding: 12px 15px;
+}
+.job-requirement #table-job-requirement td
+{
+  text-decoration: underline blue;
+  color: blue;
+}
+
+.job-requirement #table-job-requirement{
+
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  width: 80%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.job-popup-msg-bg {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.596);
+  transition: 1s ease;
+}
+
+.job-popup-msg{
+  justify-content: center;
+  align-items: left;
+  display: none;
+  font-size: 1rem;
+  flex-direction: column;
+  padding: 50px;
+  background-color: var(--grey-7);
+}
+.job-popup-msg div {
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+.job-popup-msg div h5{
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.job-popup-close-btn {
+  position: absolute;
+  color: red;
+  border-radius: 2rem;
+  background: var(--grey-2);
+  opacity: 0.85; 
+  padding: 0.85rem 1.25rem;
+  top: 15%;
+  left: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  
+}
+
+
+/* end Carrer page */
+
+/* end job-requirement section */

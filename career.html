@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Group1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./fontawesome-free-5.12.1-web/css/all.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body  >
+    <!-- header -->
+    <header class="header">
+        <!-- header contact -->
+        <div id="header-contact">
+            <div class="header-contactDetails">
+                <a href="telno:+918888888888">
+                    <i class="fas fa-phone"></i> +91 888-888-8888
+                </a>
+                <span> | </span>
+                <a href="mailto:abc@abc.com">
+                    <i class="fas fa-envelope"></i> inquiry@abc.com
+                </a>
+            </div>
+        </div>
+        <!-- end of header contact -->
+        <!-- nav bar -->
+        <nav class="nav-bar" id="nav-bar">
+            <div class="logo-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/VSPtechLogo.jpg" class="logo-img" />
+                    </a>
+                </div>
+                <i class="fas fa-bars nav-btn"></i>
+            </div>
+            <div class="nav-links hidden">
+                <ul class="nav-link">
+                    <li><a href="index.html" class="link">home <span class="far fa-hand-point-down"><span></a></li>
+                    <li><a href="career" class="link">career</a></li>
+                    <li><a href="contact" class="link">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end of nav bar -->
+        <!-- Home sub-section nav-bar -->
+        <div>
+            <ul class="home-links">
+                <li><a href="#whoweare" class="home-link">who we are</a></li>
+                <li><a href="#whatwedo" class="home-link">what we do</a></li>
+                <li><a href="#" class="home-link">who we serve</a></li>
+                <li><a href="#" class="home-link">why us</a></li>
+                <li><a href="#" class="home-link">contact us</a></li>
+            </ul>
+        </div>
+        <!-- End of home sub-section nav-bar -->
+    </header>
+    <!-- end of header -->
+    <!-- side bar -->
+    <aside class="sidebar">
+        <div>
+            <button class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+            <ul class="sidebar-links">
+                <li><a href="#index.html" class="sidebar-link">home</a></li>
+                <li><a href="#" class="sidebar-link">career</a></li>
+                <li><a href="#" class="sidebar-link">contact</a></li>
+            </ul>
+        </div>
+    </aside>
+    <!-- end of sidebar -->
+    <main >
+        <!-- career banner  -->
+        <section class="careerbanner" >
+            <img src="./images/careerBanner.jpg" class="careerbanner-img" />
+        </section>  
+        <!-- End of career banner  -->
+        
+        <!-- service-benifits -->
+        <section id="service-benifits">
+            <div class="service-benifits section-center">
+            <h3>VSPTech IT Services Benefits</h3>
+
+            <div class="service-benifits-content ">
+            
+            <div class="service-benifits-1">
+                <p>VSPTech IT Services offers attractive benefit packages to meet the personal needs of our employees and their families. We prefer to be an employer of choice, and the meticulous efforts of our Human Resources ensure that our benefit plans are competitive and comprehensive. VSPTech IT Services believes in holistic approach of covering all needs of employees like health coverage, tuition reimbursement, and green card assistance.</p><br>
+                <p>The available benefits are:</p><br>
+                <ul>
+                    <li><span><i class="fas fa-check-square"></i></span>Group health insurance (PPO/PMO) for the employee and qualified dependents</li>
+                    <li><span><i class="fas fa-check-square"></i></span>Group Dental & Vision insurance</li>
+                  
+                </ul>
+            </div class="service-benifits-2">            
+            <div>
+                <ul>
+                    <li><span><i class="fas fa-check-square"></i></span>Paid vacation</li>
+                    <li><span><i class="fas fa-check-square"></i></span>Sick time</li>
+                    <li><span><i class="fas fa-check-square"></i></span>401(k) pension plan</li>
+                    <li><span><i class="fas fa-check-square"></i></span>Professional development</li>
+                    <li><span><i class="fas fa-check-square"></i></span>Tuition reimbursement</li>
+                    <li><span><i class="fas fa-check-square"></i></span>Relocation expenses</li>
+                    <li><span><i class="fas fa-check-square"></i></span>Marginal federal income tax savings</li>
+                    <li><span><i class="fas fa-check-square"></i></span>Social Security tax savings on out-of-pocket healthcare and dependent care expenses</li>
+                    <li><span><i class="fas fa-check-square"></i></span>Green card sponsorship in the United States (permanent residents)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        </section>  
+        <!-- end of service-benifits -->
+        
+        <!-- job-requirement -->
+        <section id="job-requirement section-center"> 
+               
+
+            <div class="job-requirement" >
+
+                <h3>JOB REQIREMENTS IN OUR FIRM</h3>
+                <div class="job-requirement-search">
+                    <input type="text" placeholder="Keywords" id="searchword">
+                    <input type="submit" value="Search" onclick="searchTable(document.getElementById('searchword').value)">
+                </div>
+                <div class="table-job">
+                    <table id="table-job-requirement"> 
+                                    
+                    </table>
+                </div>
+                <div class="table-page-number">
+                    <button onclick="tablePageLeft(document.getElementById('page-num').innerText,document.getElementById('searchword').value)"><i class="fas fa-chevron-circle-left"></i></button>
+                    <div id="page-num">
+                        1
+                    </div>
+                    <button onclick="tablePageRight(document.getElementById('page-num').innerText,document.getElementById('searchword').value)"><i class="fas fa-chevron-circle-right"></i></button>
+                </div>
+            </div>
+        </section>
+        <div class="job-popup-msg-bg">            
+                <div class="job-popup-msg">
+                    <div class="job-popup-msg-description">
+                        
+                    </div>
+                    <div class="job-popup-msg-requirement">
+                        
+                    </div>
+                    <div class="job-popup-msg-contact-details">
+                        
+                    </div>                    
+                    <span class="job-popup-close-btn" ><i class="fas fa-times"></i></span>
+                 </div>
+        </div>
+        <!-- end of job-requirement -->
+    </main>
+    <!-- footer -->
+    <footer class="footer section">
+        <hr />
+        <!-- social icons -->
+        <ul class="social-icons">
+            <li>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!-- end of social icon -->
+        <p>&copy; <span id="date"></span> all rights reserved</p>
+    </footer>
+    <!-- end of footer -->
+    <script src="./js/main.js"></script>
+    <script src="./js/career.js"></script>
+</body>
+
+</html>
