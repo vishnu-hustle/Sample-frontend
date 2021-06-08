@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>VSP Tech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./fontawesome-free-5.12.1-web/css/all.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <!-- header contact -->
+        <div id="header-contact">
+            <div class="header-contactDetails">
+                <a href="telno:+918888888888">
+                    <i class="fas fa-phone"></i> +91 888-888-8888
+                </a>
+                <span> | </span>
+                <a href="mailto:abc@abc.com">
+                    <i class="fas fa-envelope"></i> inquiry@abc.com
+                </a>
+            </div>
+        </div>
+        <!-- end of header contact -->
+        <!-- nav bar -->
+        <nav class="nav-bar" id="nav-bar">
+            <div class="logo-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/VSPtechLogo.jpg" class="logo-img" />
+                    </a>
+                </div>
+                <i class="fas fa-bars nav-btn"></i>
+            </div>
+            <div class="nav-links hidden">
+                <ul class="nav-link">
+                    <li><a href="index.html" class="link">home</a></li>
+                    <li><a href="career.html" class="link">career</a></li>
+                    <li><a href="contact.html" class="link active-link">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end of nav bar -->
+    </header>
+    <!-- end of header -->
+    <!-- side bar -->
+    <aside class="sidebar">
+        <div>
+            <button class="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+            <ul class="sidebar-links">
+                <li><a href="index.html" class="sidebar-link">home</a></li>
+                <li><a href="career.html" class="sidebar-link">career</a></li>
+                <li><a href="contact.html" class="sidebar-link">contact</a></li>
+            </ul>
+        </div>
+    </aside>
+    <!-- end of sidebar -->
+    <main class="contact-us section">
+        <section class="banner">
+            <img src="./images/peggy-anke-MPnn435Dr9w-unsplash.png" class="banner-img" />
+        </section>
+        <div class="contact-main section-center" id="inquiry-main">
+            <!-- address -->
+            <div class="contact-address grid-item-contact-main">
+                <h2>Inquiry</h2>
+                <div id="address">
+                    <h4>Pune</h4>
+                    <p>
+                        2nd Floor, F Wing Lotus Corporate Park,<br /> Magarpatta City, Hadapsar, <br /> Maharashtra, India 411 063<br /> Ph: +91 20 1234 5678
+                    </p>
+                </div>
+                <div id="map" class="address-word"></div>
+            </div>
+            <!-- end of address -->
+
+            <!-- contact form -->
+            <div class="contact-form grid-item-contact-main">
+                <h2>Write to Us</h2>
+                <form>
+
+                    <label for="fname">First Name</label><span style="color:red;">*</span>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <p id="fnameError"></p>
+                    <label for="lname">Last Name</label><span style="color:red;">*</span>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <p id="lnameError"></p>
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="usa">USA</option>
+                    </select>
+                    <label for="state">State</label><span style="color:red;">*</span>
+                    <input type="text" id="state" name="state" placeholder="Your state name..">
+                    <p id="stateError"></p>
+                    <label for="phone">Phone Number</label><span style="color:red;">*</span>
+                    <input type="text" id="phone" name="phone" placeholder="Your Phone Number..like +01 999999999">
+                    <p id="phoneError"></p>
+                    <label for="email">Email</label><span style="color:red;">*</span>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address..">
+                    <p id="emailError"></p>
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    <p id="subjectError"></p>
+
+                    <input type="button" id="submitButton" value="Submit" />
+                    <input type="reset" value="Clear" id="clearButton">
+                    <p id="submitError"></p>
+
+                </form>
+            </div>
+            <!-- end of contact form -->
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="footer section">
+        <hr />
+        <!-- social icons -->
+        <ul class="social-icons">
+            <li>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!-- end of social icon -->
+        <p>&copy; <span id="date"></span> all rights reserved</p>
+    </footer>
+    <!-- end of footer -->
+    <script src="./js/main.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmZHbHyQrV4TWqsvgdyMxsnOPCheoJ9aA&callback=initMap" type="text/javascript"></script>
+</body>
+
+</html>
