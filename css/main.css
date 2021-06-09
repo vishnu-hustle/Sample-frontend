@@ -935,22 +935,22 @@ who we serve
 }
 
 .whoweserve .industry1 {
-    background: -webkit-linear-gradient( rgba(0, 0, 0, 0.473), rgba(148, 148, 148, 0.26)), url(../images/ind1.jpg);
+    background: -webkit-linear-gradient( rgba(0, 0, 0, 0.473), rgba(148, 148, 148, 0.26)), url(../images/science-in-hd-i4ABHj811N0-unsplash.jpg);
     background-size: cover;
 }
 
 .whoweserve .industry2 {
-    background: -webkit-linear-gradient( rgba(0, 0, 0, 0.473), rgba(148, 148, 148, 0.26)), url(../images/ind2.jpg);
+    background: -webkit-linear-gradient( rgba(0, 0, 0, 0.473), rgba(148, 148, 148, 0.26)), url(../images/micheile-henderson-ZVprbBmT8QA-unsplash.jpg);
     background-size: cover;
 }
 
 .whoweserve .industry3 {
-    background: -webkit-linear-gradient( rgba(0, 0, 0, 0.473), rgba(148, 148, 148, 0.26)), url(../images/ind3.jpg);
+    background: -webkit-linear-gradient( rgba(0, 0, 0, 0.473), rgba(148, 148, 148, 0.26)), url(../images/susan-q-yin-2JIvboGLeho-unsplash.jpg);
     background-size: cover;
 }
 
 .whoweserve .industry4 {
-    background: -webkit-linear-gradient( rgba(0, 0, 0, 0.473), rgba(148, 148, 148, 0.26)), url(../images/ind4.jpg);
+    background: -webkit-linear-gradient( rgba(0, 0, 0, 0.473), rgba(148, 148, 148, 0.26)), url(../images/markus-spiske-wL7pwimB78Q-unsplash.jpg);
     background-size: cover;
 }
 
@@ -978,8 +978,8 @@ who we serve
     flex-direction: row;
     justify-content: center;
     padding: 50px;
-    height: 40vh;
-    width: 60vh;
+    height: 60vh;
+    width: 100vh;
     background-color: var(--grey-7);
 }
 
@@ -993,6 +993,40 @@ who we serve
     margin: 10px;
     font-size: 1rem;
     color: var(--grey-1);
+}
+
+.industry1-msg ul,
+.industry2-msg ul,
+.industry3-msg ul,
+.industry4-msg ul {
+    align-self: center;
+    text-align: center;
+    position: relative;
+    margin: 10px;
+    font-size: 1rem;
+    color: var(--grey-1);
+}
+
+.industry1-msg li,
+.industry2-msg li,
+.industry3-msg li,
+.industry4-msg li {
+    align-self: center;
+    text-align: center;
+    position: relative;
+    font-size: 1rem;
+    margin: 1px;
+    color: var(--grey-1);
+}
+
+.industry1-msg h4,
+.industry2-msg h4,
+.industry3-msg h4,
+.industry4-msg h4 {
+    align-self: center;
+    text-align: center;
+    position: relative;
+    margin: 10px;
 }
 
 .whoweserver-btn {

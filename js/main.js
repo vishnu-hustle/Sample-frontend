@@ -302,9 +302,9 @@ New Array Declaration
 
 let newsArray = new Array();
 newsArray.push("Our organization is about scale and quality. We take great care to deliver the best to our customers by understanding their needs. Focus, agility and flexibility from our side are always paramount as we go the extra mile to drive success for our customers.");
-newsArray.push("We at Limsons IT Services LLC are Building the next Innovative IT job search website Dollar Dream Jobs (www.dollardreamjobs.com). The fastest way to find the right IT job USA and All over world.");
+newsArray.push("We at VSP Tech are Building the next Innovative IT job search website Dollar Dream Jobs (www.dollardreamjobs.com). The fastest way to find the right IT job USA and All over world.");
 newsArray.push("We are accepting investment Capitol to develop this project. Raising a Target capital of $2 million with family and friends. $ 200,000 Committed so far by near and dear...");
-newsArray.push("Minimum Investment $ 2500. preferred is 12,000 per investor. Reach Invest@limsons.com for More details about Investment plan ROI Etc.");
+newsArray.push("Minimum Investment $ 2500. preferred is 12,000 per investor. Reach VSP Tech for More details about Investment plan ROI Etc.");
 
 
 /*
