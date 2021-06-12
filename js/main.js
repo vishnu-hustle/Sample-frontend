@@ -1,56 +1,72 @@
 'use strict';
-const dateDisplay = (document.querySelector('#date').textContent = new Date().getFullYear());
-const header = document.querySelector('.header');
-const headerContact = document.querySelector('#header-contact');
-const navBtn = document.querySelector('.nav-btn');
-const navLinks = document.querySelector('.nav-links');
-const sidebar = document.querySelector('.sidebar');
-const closeBtn = document.querySelector('.close-btn');
-const sidebarLink = document.querySelectorAll('.sidebar-link')
+// const dateDisplay = (document.querySelector('#date').textContent = new Date().getFullYear());
+// const header = document.querySelector('.header');
+// const headerContact = document.querySelector('#header-contact');
+// const navBtn = document.querySelector('.nav-btn');
+// const navLinks = document.querySelector('.nav-links');
+// const sidebar = document.querySelector('.sidebar');
+// const closeBtn = document.querySelector('.close-btn');
+// const sidebarLink = document.querySelectorAll('.sidebar-link');
+const secWhoWeAre = document.querySelector('#whoweare');
+const secWhatWeDo = document.querySelector('#whatwedo');
+const secWhoWeServe = document.querySelector('#whoweserve');
+const secWhyUs = document.querySelector('#whyus');
+const secContactUs = document.querySelector('#contactus');
 
-window.addEventListener("scroll", function() {
-    if (window.pageYOffset > 150) {
-        headerContact.classList.add('hidden')
-    } else {
-        headerContact.classList.remove('hidden')
-    }
-});
 
-window.addEventListener("resize", function() {
-    if (window.innerWidth >= 769) {
-        navLinks.classList.remove('hidden');
-        navBtn.style.display = 'none';
-    } else {
-        navLinks.classList.add('hidden');
-        navBtn.style.display = 'block';
-    }
-})
+//remove phone and mail from navigation after scroll
+// window.addEventListener("scroll", function () {
+//     if (window.pageYOffset > 150) {
+//         headerContact.classList.add('hidden')
+//     } else {
+//         headerContact.classList.remove('hidden')
+//     }
+// });
 
-window.addEventListener("load", function() {
-    if (window.innerWidth >= 769) {
-        navLinks.classList.remove('hidden');
-        navBtn.style.display = 'none';
-    } else {
-        navLinks.classList.add('hidden');
-        navBtn.style.display = 'block';
-    }
+//show/hide nav-links and nav-button on window resize
+// window.addEventListener("resize", function () {
+//     if (window.innerWidth >= 769) {
+//         navLinks.classList.remove('hidden');
+//         navBtn.style.display = 'none';
+//     } else {
+//         navLinks.classList.add('hidden');
+//         navBtn.style.display = 'block';
+//     }
+// })
+
+//show/hide nav-links and nav-button on screen load
+// window.addEventListener("load", function () {
+//     if (window.innerWidth >= 769) {
+//         navLinks.classList.remove('hidden');
+//         navBtn.style.display = 'none';
+//     } else {
+//         navLinks.classList.add('hidden');
+//         navBtn.style.display = 'block';
+//     }
+// })
+
+function loadIndex() {
     whatwedosubHide(); //WHAT WE DO CHANGE
     whatwedosubHideMobile(); //WHAT WE DO CHANGE
-})
-
-navBtn.addEventListener('click', function() {
-    sidebar.classList.add('show-sidebar');
-})
-
-closeBtn.addEventListener('click', function() {
-    sidebar.classList.remove('show-sidebar');
-})
-
-for (let i = 0; i < sidebarLink.length; i++) {
-    sidebarLink[i].addEventListener('click', function() {
-        sidebar.classList.remove('show-sidebar');
-    })
 }
+//show sidebar in mobile/tablet mode
+// navBtn.addEventListener('click', function () {
+//     sidebar.classList.add('show-sidebar');
+// })
+
+
+//hide navbar in mobile/tablet mode
+// closeBtn.addEventListener('click', function () {
+//     sidebar.classList.remove('show-sidebar');
+// })
+
+
+//add event listner to hide sidebar when clicked on link in mobile/tablet mode
+// for (let i = 0; i < sidebarLink.length; i++) {
+//     sidebarLink[i].addEventListener('click', function () {
+//         sidebar.classList.remove('show-sidebar');
+//     })
+// }
 
 
 // aboutus-info and vision-info display/hide on click
@@ -67,9 +83,61 @@ $(document).ready(function() {
     })
 });
 
+/*
+=======================================================
+Active Navigation tab under Home
+=========================================================
+*/
+window.addEventListener('scroll', function() {
+    document.querySelector("#whowearelink").classList.remove("active-link");
+    document.querySelector("#whatwedolink").classList.remove("active-link");
+    document.querySelector("#whoweservelink").classList.remove("active-link");
+    document.querySelector("#whyuslink").classList.remove("active-link");
+    document.querySelector("#contactuslink").classList.remove("active-link");
+
+    if (window.pageYOffset >= secWhoWeAre.offsetTop - 100 && window.pageYOffset < secWhatWeDo.offsetTop - 100) {
+        document.querySelector("#whowearelink").classList.add("active-link");
+        document.querySelector("#whatwedolink").classList.remove("active-link");
+        document.querySelector("#whoweservelink").classList.remove("active-link");
+        document.querySelector("#whyuslink").classList.remove("active-link");
+        document.querySelector("#contactuslink").classList.remove("active-link");
+    } else if (window.pageYOffset >= secWhatWeDo.offsetTop - 100 && window.pageYOffset < secWhoWeServe.offsetTop - 100) {
+        document.querySelector("#whowearelink").classList.remove("active-link");
+        document.querySelector("#whatwedolink").classList.add("active-link");
+        document.querySelector("#whoweservelink").classList.remove("active-link");
+        document.querySelector("#whyuslink").classList.remove("active-link");
+        document.querySelector("#contactuslink").classList.remove("active-link");
+    } else if (window.pageYOffset >= secWhoWeServe.offsetTop - 100 && window.pageYOffset < secWhyUs.offsetTop - 100) {
+        document.querySelector("#whowearelink").classList.remove("active-link");
+        document.querySelector("#whatwedolink").classList.remove("active-link");
+        document.querySelector("#whoweservelink").classList.add("active-link");
+        document.querySelector("#whyuslink").classList.remove("active-link");
+        document.querySelector("#contactuslink").classList.remove("active-link");
+    } else if (window.pageYOffset >= secWhyUs.offsetTop - 100 && window.pageYOffset < secContactUs.offsetTop - 100) {
+        document.querySelector("#whowearelink").classList.remove("active-link");
+        document.querySelector("#whatwedolink").classList.remove("active-link");
+        document.querySelector("#whoweservelink").classList.remove("active-link");
+        document.querySelector("#whyuslink").classList.add("active-link");
+        document.querySelector("#contactuslink").classList.remove("active-link");
+    } else if (window.pageYOffset >= secContactUs.offsetTop - 100) {
+        document.querySelector("#whowearelink").classList.remove("active-link");
+        document.querySelector("#whatwedolink").classList.remove("active-link");
+        document.querySelector("#whoweservelink").classList.remove("active-link");
+        document.querySelector("#whyuslink").classList.remove("active-link");
+        document.querySelector("#contactuslink").classList.add("active-link");
+    }
+})
+
 
 /*
-WHAT WE DO SECTION STARTS
+===============================================================
+End of Active Navigation tab under Home and Animation on Scroll
+===============================================================
+*/
+
+
+/*
+WHAT WE DO SECTION
 */
 function whatwedosubShow() {
     document.getElementById("triangle-up").hidden = false;
@@ -161,7 +229,7 @@ function triangleForMobile4() {
 }
 
 /*
-WHAT WE DO SECTION ENDS
+END of WHAT WE DO SECTION
 */
 
 // who we server
@@ -219,55 +287,323 @@ function closepopup() {
 
 // End of who we server
 
+
+
 /*
 WHY US STARTS
 */
+
+
+/*
+================================
+New Array Declaration
+================================
+*/
+
 let newsArray = new Array();
 newsArray.push("Our organization is about scale and quality. We take great care to deliver the best to our customers by understanding their needs. Focus, agility and flexibility from our side are always paramount as we go the extra mile to drive success for our customers.");
-newsArray.push("We at Limsons IT Services LLC are Building the next Innovative IT job search website<b>Dollar Dream Jobs www.dollardreamjobs.com</b>. The fastest way to find the right IT job USA and All over world.");
+newsArray.push("We at VSP Tech are Building the next Innovative IT job search website Dollar Dream Jobs (www.dollardreamjobs.com). The fastest way to find the right IT job USA and All over world.");
 newsArray.push("We are accepting investment Capitol to develop this project. Raising a Target capital of $2 million with family and friends. $ 200,000 Committed so far by near and dear...");
-newsArray.push("Minimum Investment $ 2500. preferred is 12,000 per investor. Reach Invest@limsons.com for More details about Investment plan ROI Etc.");
+newsArray.push("Minimum Investment $ 2500. preferred is 12,000 per investor. Reach VSP Tech for More details about Investment plan ROI Etc.");
 
-let newsIndex = 1;
+
+/*
+===========================
+News Banner
+===========================
+*/
+let newsIndex = 0;
 
 function loadleft() {
-
-    if (newsIndex > -1 && newsIndex < newsArray.length) {
-        document.getElementById('newsUpdate').innerText = newsArray[newsIndex];
-        document.getElementById('top-left-update').disabled = false;
-        document.getElementById('top-right-update').disabled = false;
-        document.getElementById('top-left-update-img').style.opacity = "1";
-        document.getElementById('top-right-update-img').style.opacity = "1";
-        newsIndex--;
+    newsIndex = (newsIndex - 1) % 4
+    if (newsIndex < 0) {
+        newsIndex = newsArray.length - 1;
     }
-    if (newsIndex == -1) {
-        newsIndex = 1;
-        document.getElementById('top-left-update').disabled = true;
-        document.getElementById('top-left-update-img').style.opacity = "0.5";
-        document.getElementById('top-right-update').disabled = false;
-    }
-
+    console.log(newsIndex)
+    document.getElementById('newsUpdate').innerText = newsArray[newsIndex];
 }
 
 function loadright() {
-
-    if (newsIndex > -1 && newsIndex < newsArray.length) {
-        document.getElementById('newsUpdate').innerText = newsArray[newsIndex];
-        document.getElementById('top-left-update').disabled = false;
-        document.getElementById('top-right-update').disabled = false;
-        document.getElementById('top-left-update-img').style.opacity = "1";
-        document.getElementById('top-right-update-img').style.opacity = "1";
-        newsIndex++;
-    }
-    if (newsIndex == newsArray.length) {
-        newsIndex = newsIndex - 2;
-        document.getElementById('top-right-update').disabled = true;
-        document.getElementById('top-left-update').disabled = false;
-        document.getElementById('top-right-update-img').style.opacity = "0.5";
-    }
+    newsIndex = (newsIndex + 1) % 4
+    console.log(newsIndex)
+    document.getElementById('newsUpdate').innerText = newsArray[newsIndex];
 }
 
 
 /*
 WHY US ENDS
 */
+
+/*
+===========================
+Animation
+===========================
+*/
+
+const whoweareTimeline = new TimelineLite();
+
+
+//Who we are animation
+whoweareTimeline.fromTo('.whoweare-intro', 2, {
+    opacity: 0,
+    y: -30,
+    // ease: Power3.easeout
+}, {
+    opacity: 1,
+    y: 0
+}).fromTo('.aboutus', 3, {
+    opacity: 0,
+    x: -50,
+    // ease: step
+}, {
+    opacity: 1,
+    x: 0
+}, "-=1").fromTo('.vision', 3, {
+    opacity: 0,
+    x: +50,
+    // ease: Power1
+}, {
+    opacity: 1,
+    x: 0,
+}, "-= 3");
+
+
+const controller = new ScrollMagic.Controller();
+
+const sceneWhoweare = new ScrollMagic.Scene({
+        triggerElement: '.whoweare',
+        // duration: 280,
+        triggerHook: 0.8
+    })
+    .setTween(whoweareTimeline)
+    //.addIndicators()
+    .addTo(controller);
+
+
+// What we do  --desktop
+const whatwedoTimeline = new TimelineLite();
+
+whatwedoTimeline.fromTo('#grid-item-what-we-do-1', 0.5, {
+    opacity: 0,
+    x: -50
+}, {
+    opacity: 1,
+    x: 0
+}).fromTo('#grid-item-what-we-do-2', 0.5, {
+    opacity: 0,
+    x: -50
+}, {
+    opacity: 1,
+    x: 0
+}).fromTo('#grid-item-what-we-do-3', 0.5, {
+    opacity: 0,
+    x: 50
+}, {
+    opacity: 1,
+    x: 0
+}).fromTo('#grid-item-what-we-do-4', 0.5, {
+    opacity: 0,
+    x: 50
+}, {
+    opacity: 1,
+    x: 0
+})
+
+const sceneWhatwedo = new ScrollMagic.Scene({
+        triggerElement: '.whatwedo-title'
+    })
+    .setTween(whatwedoTimeline)
+    //.addIndicators()
+    .addTo(controller);
+
+//Who we serve
+const whoweserveTimeline = new TimelineLite();
+whoweserveTimeline.fromTo('.industry1', 1, {
+    y: 100,
+    opacity: 0
+}, {
+    y: 0,
+    opacity: 1
+}).fromTo('.industry2', 0.5, {
+    y: 100,
+    opacity: 0
+}, {
+    y: 0,
+    opacity: 1
+}, "+=0.1").fromTo('.industry3', 0.5, {
+    y: 100,
+    opacity: 0
+}, {
+    y: 0,
+    opacity: 1
+}, "+=0.1").fromTo('.industry4', 0.5, {
+    y: 100,
+    opacity: 0
+}, {
+    y: 0,
+    opacity: 1
+}, "+=0.1")
+
+
+const sceneWhoweserve = new ScrollMagic.Scene({
+        triggerElement: '.whoweserve'
+    })
+    .setTween(whoweserveTimeline)
+    //.addIndicators()
+    .addTo(controller);
+
+
+// Why us
+const whyusTimeline = new TimelineLite();
+
+whyusTimeline.fromTo('.top-right h4', 0.3, {
+    opacity: 0
+}, {
+    opacity: 1
+}).fromTo('.top-right p', 0.5, {
+    opacity: 0
+}, {
+    opacity: 1
+})
+
+const sceneWhyus = new ScrollMagic.Scene({
+        triggerElement: '.why-us h3'
+    }).setTween(whyusTimeline)
+    //.addIndicators()
+    .addTo(controller);
+
+//Values
+
+//honesty
+
+const honestyTimeline = new TimelineLite();
+
+honestyTimeline.fromTo('#value1 .v1', 1, {
+    x: -100,
+    opacity: 0
+}, {
+    x: 0,
+    opacity: 1
+}).fromTo('#value1 .v2', 1, {
+    y: 100,
+    opacity: 0
+}, {
+    y: 0,
+    opacity: 1
+}, "-=1");
+
+const sceneHonesty = new ScrollMagic.Scene({
+        triggerElement: ".values-heading"
+    }).setTween(honestyTimeline)
+    //.addIndicators()
+    .addTo(controller);
+
+const teamworkTimeline = new TimelineLite();
+
+teamworkTimeline.fromTo('#value2 .v1', 1, {
+    x: 100,
+    opacity: 0
+}, {
+    x: 0,
+    opacity: 1
+}).fromTo('#value2 .v2', 1, {
+    y: 100,
+    opacity: 0
+}, {
+    y: 0,
+    opacity: 1
+}, "-=1")
+
+const sceneTeamwork = new ScrollMagic.Scene({
+        triggerElement: ".values-heading",
+        triggerHook: 0.1
+    }).setTween(teamworkTimeline)
+    //.addIndicators()
+    .addTo(controller);
+
+// Challenger
+const challengerTimeline = new TimelineLite();
+
+challengerTimeline.fromTo('#value3 .v1', 1, {
+    x: -100,
+    opacity: 0
+}, {
+    x: 0,
+    opacity: 1
+}).fromTo('#value3 .v2', 1, {
+    y: 100,
+    opacity: 0
+}, {
+    y: 0,
+    opacity: 1
+}, "-=1");
+
+const sceneChallenger = new ScrollMagic.Scene({
+        triggerElement: "#value2",
+        triggerHook: 0.3
+    }).setTween(challengerTimeline)
+    //.addIndicators()
+    .addTo(controller);
+
+
+//engaged
+
+const engagedTimeline = new TimelineLite();
+
+engagedTimeline.fromTo('#value4 .v1', 1, {
+    x: 100,
+    opacity: 0
+}, {
+    x: 0,
+    opacity: 1
+}).fromTo('#value4 .v2', 1, {
+    y: 100,
+    opacity: 0
+}, {
+    y: 0,
+    opacity: 1
+}, "-=1");
+
+const sceneEngaged = new ScrollMagic.Scene({
+        triggerElement: "#value3",
+        triggerHook: 0.2
+    }).setTween(engagedTimeline)
+    //.addIndicators()
+    .addTo(controller);
+
+
+// What we do  --mobile
+const whatwedoMobileTimeline = new TimelineLite();
+
+whatwedoMobileTimeline.fromTo('#what-we-do-mobile #grid-item-what-we-do-1', 0.5, {
+    opacity: 0,
+    x: -50
+}, {
+    opacity: 1,
+    x: 0
+}).fromTo('#what-we-do-mobile #grid-item-what-we-do-2', 0.5, {
+    opacity: 0,
+    x: -50
+}, {
+    opacity: 1,
+    x: 0
+}).fromTo('#what-we-do-mobile #grid-item-what-we-do-3', 0.5, {
+    opacity: 0,
+    x: 50
+}, {
+    opacity: 1,
+    x: 0
+}).fromTo('#what-we-do-mobile #grid-item-what-we-do-4', 0.5, {
+    opacity: 0,
+    x: 50
+}, {
+    opacity: 1,
+    x: 0
+})
+
+const sceneWhatwedoMobile = new ScrollMagic.Scene({
+        triggerElement: '#whatwedo'
+    })
+    .setTween(whatwedoMobileTimeline)
+    //.addIndicators()
+    .addTo(controller);
