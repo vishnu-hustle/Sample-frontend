@@ -70,13 +70,13 @@ function loadIndex() {
 
 
 // aboutus-info and vision-info display/hide on click
-$(document).ready(function () {
-    $(".aboutus-btn").click(function () {
+$(document).ready(function() {
+    $(".aboutus-btn").click(function() {
         $(".aboutus-details").animate({
             height: 'toggle'
         });
     });
-    $(".vision-btn").click(function () {
+    $(".vision-btn").click(function() {
         $(".vision-details").animate({
             height: 'toggle'
         });
@@ -88,7 +88,7 @@ $(document).ready(function () {
 Active Navigation tab under Home
 =========================================================
 */
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function() {
     document.querySelector("#whowearelink").classList.remove("active-link");
     document.querySelector("#whatwedolink").classList.remove("active-link");
     document.querySelector("#whoweservelink").classList.remove("active-link");
@@ -371,10 +371,10 @@ whoweareTimeline.fromTo('.whoweare-intro', 2, {
 const controller = new ScrollMagic.Controller();
 
 const sceneWhoweare = new ScrollMagic.Scene({
-    triggerElement: '.whoweare',
-    // duration: 280,
-    triggerHook: 0.8
-})
+        triggerElement: '.whoweare',
+        // duration: 280,
+        triggerHook: 0.8
+    })
     .setTween(whoweareTimeline)
     //.addIndicators()
     .addTo(controller);
@@ -410,8 +410,8 @@ whatwedoTimeline.fromTo('#grid-item-what-we-do-1', 0.5, {
 })
 
 const sceneWhatwedo = new ScrollMagic.Scene({
-    triggerElement: '.whatwedo-title'
-})
+        triggerElement: '.whatwedo-title'
+    })
     .setTween(whatwedoTimeline)
     //.addIndicators()
     .addTo(controller);
@@ -446,8 +446,8 @@ whoweserveTimeline.fromTo('.industry1', 1, {
 
 
 const sceneWhoweserve = new ScrollMagic.Scene({
-    triggerElement: '.whoweserve'
-})
+        triggerElement: '.whoweserve'
+    })
     .setTween(whoweserveTimeline)
     //.addIndicators()
     .addTo(controller);
@@ -467,8 +467,8 @@ whyusTimeline.fromTo('.top-right h4', 0.3, {
 })
 
 const sceneWhyus = new ScrollMagic.Scene({
-    triggerElement: '.why-us h3'
-}).setTween(whyusTimeline)
+        triggerElement: '.why-us h3'
+    }).setTween(whyusTimeline)
     //.addIndicators()
     .addTo(controller);
 
@@ -493,8 +493,8 @@ honestyTimeline.fromTo('#value1 .v1', 1, {
 }, "-=1");
 
 const sceneHonesty = new ScrollMagic.Scene({
-    triggerElement: ".values-heading"
-}).setTween(honestyTimeline)
+        triggerElement: ".values-heading"
+    }).setTween(honestyTimeline)
     //.addIndicators()
     .addTo(controller);
 
@@ -515,9 +515,9 @@ teamworkTimeline.fromTo('#value2 .v1', 1, {
 }, "-=1")
 
 const sceneTeamwork = new ScrollMagic.Scene({
-    triggerElement: ".values-heading",
-    triggerHook: 0.1
-}).setTween(teamworkTimeline)
+        triggerElement: ".values-heading",
+        triggerHook: 0.1
+    }).setTween(teamworkTimeline)
     //.addIndicators()
     .addTo(controller);
 
@@ -539,9 +539,9 @@ challengerTimeline.fromTo('#value3 .v1', 1, {
 }, "-=1");
 
 const sceneChallenger = new ScrollMagic.Scene({
-    triggerElement: "#value2",
-    triggerHook: 0.3
-}).setTween(challengerTimeline)
+        triggerElement: "#value2",
+        triggerHook: 0.3
+    }).setTween(challengerTimeline)
     //.addIndicators()
     .addTo(controller);
 
@@ -565,9 +565,9 @@ engagedTimeline.fromTo('#value4 .v1', 1, {
 }, "-=1");
 
 const sceneEngaged = new ScrollMagic.Scene({
-    triggerElement: "#value3",
-    triggerHook: 0.2
-}).setTween(engagedTimeline)
+        triggerElement: "#value3",
+        triggerHook: 0.2
+    }).setTween(engagedTimeline)
     //.addIndicators()
     .addTo(controller);
 
@@ -602,8 +602,8 @@ whatwedoMobileTimeline.fromTo('#what-we-do-mobile #grid-item-what-we-do-1', 0.5,
 })
 
 const sceneWhatwedoMobile = new ScrollMagic.Scene({
-    triggerElement: '#whatwedo'
-})
+        triggerElement: '#whatwedo'
+    })
     .setTween(whatwedoMobileTimeline)
     //.addIndicators()
     .addTo(controller);
