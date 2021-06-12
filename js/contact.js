@@ -2,11 +2,11 @@ let submitEnableFlag = false;
 let map;
 let lattitude = 34.269447;
 let longitude = -118.781479;
-$(document).ready(function() {
+$(document).ready(function () {
     document.getElementById("submitButton").disabled = true;
     document.getElementById("submitButton").style.background = 'grey';
 
-    $("#fname[type=text]").blur(function() {
+    $("#fname[type=text]").blur(function () {
         this.value = this.value.trim();;
         if (this.value == "" || this.value.length < 3 || !isNaN(this.value) || !validateText(this.value)) {
             document.getElementById("fnameError").innerText = "Please enter valid first name";
@@ -17,7 +17,7 @@ $(document).ready(function() {
         }
         checkDisable();
     });
-    $("#lname[type=text]").blur(function() {
+    $("#lname[type=text]").blur(function () {
         this.value = this.value.trim();;
         if (this.value == "" || this.value.length < 3 || !isNaN(this.value) || !validateText(this.value)) {
             document.getElementById("lnameError").innerText = "Please enter valid last name";
@@ -28,7 +28,7 @@ $(document).ready(function() {
         }
         checkDisable();
     });
-    $("#state[type=text]").blur(function() {
+    $("#state[type=text]").blur(function () {
         this.value = this.value.trim();;
         if (this.value == "" || this.value.length < 3 || !isNaN(this.value) || !validateText(this.value)) {
             document.getElementById("stateError").innerText = "Please enter valid state name";
@@ -39,7 +39,7 @@ $(document).ready(function() {
         }
         checkDisable();
     });
-    $("#phone[type=text]").blur(function() {
+    $("#phone[type=text]").blur(function () {
         this.value = this.value.trim();
         if (this.value == "" || this.value.length < 10 || !isNaN(this.value) || !validateNumber(this.value)) {
             document.getElementById("phoneError").innerText = "Please enter valid phone number";
@@ -50,13 +50,13 @@ $(document).ready(function() {
         }
         checkDisable();
     });
-    $("#email[type=email]").blur(function() {
+    $("#email[type=email]").blur(function () {
         this.value = this.value.trim();
         validateTheEmail(this.value);
         checkDisable();
     });
 
-    $("#clearButton").click(function() {
+    $("#clearButton").click(function () {
         document.getElementById("fnameError").innerText = "";
         document.getElementById("lnameError").innerText = "";
         document.getElementById("stateError").innerText = "";
@@ -64,13 +64,13 @@ $(document).ready(function() {
         document.getElementById("emailError").innerText = "";
     });
 
-    $("#submitButton").click(function() {
-        const CONTACT_API_URL = 'https://1dkf6vap1d.execute-api.us-east-1.amazonaws.com/default/myvsp';
+    $("#submitButton").click(function () {
+        const CONTACT_API_URL = 'https://9wsb37fxok.execute-api.us-east-1.amazonaws.com/vsptech/vsptech_email';
         const CONTACT_API_REQUEST_HEADERS = {
             "Access-Control-Allow-Origin": "*", // Required for CORS support to work
             "Accept": "*/*",
             "Content-Type": "application/json"
-                //"x-api-key": "y66xzEU4jL6QhPCmv6cxo66gRu9frAfO1fcJGQBt"
+            //"x-api-key": "y66xzEU4jL6QhPCmv6cxo66gRu9frAfO1fcJGQBt"
         };
 
         // Object for examples
@@ -99,7 +99,7 @@ $(document).ready(function() {
             .catch(error => console.error('On create student error', error));
 
     });
-    $("#address").mouseover(function() {
+    $("#address").mouseover(function () {
         lattitude = 17.385044;
         longitude = 78.486671;
         initMap();

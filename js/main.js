@@ -1,12 +1,12 @@
 'use strict';
-const dateDisplay = (document.querySelector('#date').textContent = new Date().getFullYear());
-const header = document.querySelector('.header');
-const headerContact = document.querySelector('#header-contact');
-const navBtn = document.querySelector('.nav-btn');
-const navLinks = document.querySelector('.nav-links');
-const sidebar = document.querySelector('.sidebar');
-const closeBtn = document.querySelector('.close-btn');
-const sidebarLink = document.querySelectorAll('.sidebar-link');
+// const dateDisplay = (document.querySelector('#date').textContent = new Date().getFullYear());
+// const header = document.querySelector('.header');
+// const headerContact = document.querySelector('#header-contact');
+// const navBtn = document.querySelector('.nav-btn');
+// const navLinks = document.querySelector('.nav-links');
+// const sidebar = document.querySelector('.sidebar');
+// const closeBtn = document.querySelector('.close-btn');
+// const sidebarLink = document.querySelectorAll('.sidebar-link');
 const secWhoWeAre = document.querySelector('#whoweare');
 const secWhatWeDo = document.querySelector('#whatwedo');
 const secWhoWeServe = document.querySelector('#whoweserve');
@@ -15,68 +15,68 @@ const secContactUs = document.querySelector('#contactus');
 
 
 //remove phone and mail from navigation after scroll
-window.addEventListener("scroll", function() {
-    if (window.pageYOffset > 150) {
-        headerContact.classList.add('hidden')
-    } else {
-        headerContact.classList.remove('hidden')
-    }
-});
+// window.addEventListener("scroll", function () {
+//     if (window.pageYOffset > 150) {
+//         headerContact.classList.add('hidden')
+//     } else {
+//         headerContact.classList.remove('hidden')
+//     }
+// });
 
 //show/hide nav-links and nav-button on window resize
-window.addEventListener("resize", function() {
-    if (window.innerWidth >= 769) {
-        navLinks.classList.remove('hidden');
-        navBtn.style.display = 'none';
-    } else {
-        navLinks.classList.add('hidden');
-        navBtn.style.display = 'block';
-    }
-})
+// window.addEventListener("resize", function () {
+//     if (window.innerWidth >= 769) {
+//         navLinks.classList.remove('hidden');
+//         navBtn.style.display = 'none';
+//     } else {
+//         navLinks.classList.add('hidden');
+//         navBtn.style.display = 'block';
+//     }
+// })
 
 //show/hide nav-links and nav-button on screen load
-window.addEventListener("load", function() {
-    if (window.innerWidth >= 769) {
-        navLinks.classList.remove('hidden');
-        navBtn.style.display = 'none';
-    } else {
-        navLinks.classList.add('hidden');
-        navBtn.style.display = 'block';
-    }
-})
+// window.addEventListener("load", function () {
+//     if (window.innerWidth >= 769) {
+//         navLinks.classList.remove('hidden');
+//         navBtn.style.display = 'none';
+//     } else {
+//         navLinks.classList.add('hidden');
+//         navBtn.style.display = 'block';
+//     }
+// })
 
 function loadIndex() {
     whatwedosubHide(); //WHAT WE DO CHANGE
     whatwedosubHideMobile(); //WHAT WE DO CHANGE
 }
 //show sidebar in mobile/tablet mode
-navBtn.addEventListener('click', function() {
-    sidebar.classList.add('show-sidebar');
-})
+// navBtn.addEventListener('click', function () {
+//     sidebar.classList.add('show-sidebar');
+// })
 
 
 //hide navbar in mobile/tablet mode
-closeBtn.addEventListener('click', function() {
-    sidebar.classList.remove('show-sidebar');
-})
+// closeBtn.addEventListener('click', function () {
+//     sidebar.classList.remove('show-sidebar');
+// })
 
 
 //add event listner to hide sidebar when clicked on link in mobile/tablet mode
-for (let i = 0; i < sidebarLink.length; i++) {
-    sidebarLink[i].addEventListener('click', function() {
-        sidebar.classList.remove('show-sidebar');
-    })
-}
+// for (let i = 0; i < sidebarLink.length; i++) {
+//     sidebarLink[i].addEventListener('click', function () {
+//         sidebar.classList.remove('show-sidebar');
+//     })
+// }
 
 
 // aboutus-info and vision-info display/hide on click
-$(document).ready(function() {
-    $(".aboutus-btn").click(function() {
+$(document).ready(function () {
+    $(".aboutus-btn").click(function () {
         $(".aboutus-details").animate({
             height: 'toggle'
         });
     });
-    $(".vision-btn").click(function() {
+    $(".vision-btn").click(function () {
         $(".vision-details").animate({
             height: 'toggle'
         });
@@ -88,7 +88,7 @@ $(document).ready(function() {
 Active Navigation tab under Home
 =========================================================
 */
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     document.querySelector("#whowearelink").classList.remove("active-link");
     document.querySelector("#whatwedolink").classList.remove("active-link");
     document.querySelector("#whoweservelink").classList.remove("active-link");
@@ -371,10 +371,10 @@ whoweareTimeline.fromTo('.whoweare-intro', 2, {
 const controller = new ScrollMagic.Controller();
 
 const sceneWhoweare = new ScrollMagic.Scene({
-        triggerElement: '.whoweare',
-        // duration: 280,
-        triggerHook: 0.8
-    })
+    triggerElement: '.whoweare',
+    // duration: 280,
+    triggerHook: 0.8
+})
     .setTween(whoweareTimeline)
     //.addIndicators()
     .addTo(controller);
@@ -410,8 +410,8 @@ whatwedoTimeline.fromTo('#grid-item-what-we-do-1', 0.5, {
 })
 
 const sceneWhatwedo = new ScrollMagic.Scene({
-        triggerElement: '.whatwedo-title'
-    })
+    triggerElement: '.whatwedo-title'
+})
     .setTween(whatwedoTimeline)
     //.addIndicators()
     .addTo(controller);
@@ -446,8 +446,8 @@ whoweserveTimeline.fromTo('.industry1', 1, {
 
 
 const sceneWhoweserve = new ScrollMagic.Scene({
-        triggerElement: '.whoweserve'
-    })
+    triggerElement: '.whoweserve'
+})
     .setTween(whoweserveTimeline)
     //.addIndicators()
     .addTo(controller);
@@ -467,8 +467,8 @@ whyusTimeline.fromTo('.top-right h4', 1, {
 }, "+=0.3")
 
 const sceneWhyus = new ScrollMagic.Scene({
-        triggerElement: '.why-us h3'
-    }).setTween(whyusTimeline)
+    triggerElement: '.why-us h3'
+}).setTween(whyusTimeline)
     //.addIndicators()
     .addTo(controller);
 
@@ -493,8 +493,8 @@ honestyTimeline.fromTo('#value1 .v1', 1, {
 }, "-=1");
 
 const sceneHonesty = new ScrollMagic.Scene({
-        triggerElement: ".values-heading"
-    }).setTween(honestyTimeline)
+    triggerElement: ".values-heading"
+}).setTween(honestyTimeline)
     //.addIndicators()
     .addTo(controller);
 
@@ -515,9 +515,9 @@ teamworkTimeline.fromTo('#value2 .v1', 1, {
 }, "-=1")
 
 const sceneTeamwork = new ScrollMagic.Scene({
-        triggerElement: ".values-heading",
-        triggerHook: 0.1
-    }).setTween(teamworkTimeline)
+    triggerElement: ".values-heading",
+    triggerHook: 0.1
+}).setTween(teamworkTimeline)
     //.addIndicators()
     .addTo(controller);
 
@@ -539,9 +539,9 @@ challengerTimeline.fromTo('#value3 .v1', 1, {
 }, "-=1");
 
 const sceneChallenger = new ScrollMagic.Scene({
-        triggerElement: "#value2",
-        triggerHook: 0.3
-    }).setTween(challengerTimeline)
+    triggerElement: "#value2",
+    triggerHook: 0.3
+}).setTween(challengerTimeline)
     //.addIndicators()
     .addTo(controller);
 
@@ -565,9 +565,9 @@ engagedTimeline.fromTo('#value4 .v1', 1, {
 }, "-=1");
 
 const sceneEngaged = new ScrollMagic.Scene({
-        triggerElement: "#value3",
-        triggerHook: 0.2
-    }).setTween(engagedTimeline)
+    triggerElement: "#value3",
+    triggerHook: 0.2
+}).setTween(engagedTimeline)
     //.addIndicators()
     .addTo(controller);
 
@@ -602,8 +602,8 @@ whatwedoMobileTimeline.fromTo('#what-we-do-mobile #grid-item-what-we-do-1', 0.5,
 })
 
 const sceneWhatwedoMobile = new ScrollMagic.Scene({
-        triggerElement: '#whatwedo'
-    })
+    triggerElement: '#whatwedo'
+})
     .setTween(whatwedoMobileTimeline)
     //.addIndicators()
     .addTo(controller);
