@@ -424,19 +424,19 @@ whoweserveTimeline.fromTo('.industry1', 1, {
 }, {
     y: 0,
     opacity: 1
-}).fromTo('.industry2', 1, {
+}).fromTo('.industry2', 0.5, {
     y: 100,
     opacity: 0
 }, {
     y: 0,
     opacity: 1
-}, "+=0.1").fromTo('.industry3', 1, {
+}, "+=0.1").fromTo('.industry3', 0.5, {
     y: 100,
     opacity: 0
 }, {
     y: 0,
     opacity: 1
-}, "+=0.1").fromTo('.industry4', 1, {
+}, "+=0.1").fromTo('.industry4', 0.5, {
     y: 100,
     opacity: 0
 }, {
@@ -456,15 +456,15 @@ const sceneWhoweserve = new ScrollMagic.Scene({
 // Why us
 const whyusTimeline = new TimelineLite();
 
-whyusTimeline.fromTo('.top-right h4', 1, {
+whyusTimeline.fromTo('.top-right h4', 0.3, {
     opacity: 0
 }, {
     opacity: 1
-}, "+=0.3").fromTo('.top-right p', 1, {
+}).fromTo('.top-right p', 0.5, {
     opacity: 0
 }, {
     opacity: 1
-}, "+=0.3")
+})
 
 const sceneWhyus = new ScrollMagic.Scene({
     triggerElement: '.why-us h3'
